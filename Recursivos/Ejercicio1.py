@@ -1,5 +1,6 @@
 def piramideCaracter(cadena,i):
-    if(i>=len(cadena)):
+    if(i>=len(cadena)): 
+        """Termina con el metodo recursivo"""
         return
     else:
         for a in range(0,i):

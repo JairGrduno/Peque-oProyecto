@@ -1,2 +1,1 @@
-# https---github.com-JairGrduno-Basico_Python
-Ejercicios que voy realizando conforme aprendo el lenguaje de programacion Python
+Proyectos que realizo en python, de pequeños a grandes

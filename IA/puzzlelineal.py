@@ -6,7 +6,7 @@ def buscar_solucion_BFS(estado_inicial,solucion):
     nodos_frontera=[]
     nodoInicial=Nodo(estado_inicial)
     nodos_frontera.append(nodoInicial)
-    while(not solucionado) and len(nodos_frontera)!=0:
+    while not solucionado and len(nodos_frontera)!=0:
         nodo=nodos_frontera.pop(0)
         #Extraer nodo y añadirlo a visitados
         nodos_visitados.append(nodo)
@@ -31,7 +31,7 @@ def buscar_solucion_BFS(estado_inicial,solucion):
             #Operador derecho
             hijo=[dato_nodo[0],dato_nodo[1],dato_nodo[3],dato_nodo[2]]
             hijo_derecho=Nodo(hijo)
-            if not hijo_derecho.en_lista(nodos_visitados) and not hijo_central.en_lista(nodos_frontera):
+            if not hijo_derecho.en_lista(nodos_visitados) and not hijo_derecho.en_lista(nodos_frontera):
                 nodos_frontera.append(hijo_derecho)
             nodo.set_Hijos([hijo_izquierdo,hijo_central,hijo_derecho])
 if __name__=='__main__':
@@ -42,9 +42,10 @@ if __name__=='__main__':
     resultado=[]
     nodo=nodo_solucion
     while nodo.get_Padre() != None:
-        resultado.append(nodo.get_Datos)
+        resultado.append(nodo.get_Datos())
         nodo=nodo.get_Padre()
     resultado.append(estado_inicial)
     resultado.reverse()
-    print(resultado)
+    print("Total de pasos:",end="\t")
+    print (resultado)
 
